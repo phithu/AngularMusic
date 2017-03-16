@@ -1,0 +1,146 @@
+progress {
+    margin: 0px;
+    padding: 0px;
+}
+
+.list__item {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    position: relative;
+}
+
+.list__item__inline {
+    list-style: none;
+    float: left;
+}
+
+.list__item__timing {
+    padding: 3px 5px;
+    color: #a2a2a2;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 13pt;
+    width: 42px;
+}
+
+#content__bar {
+    color: #a2a2a2;
+    font-size: 13pt;
+    position: absolute;
+    font-weight: bold;
+    left: 66px;
+    top: 1px;
+}
+
+.progress {
+    position: absolute;
+    width: 100%;
+    bottom: 31px;
+    height: 10px;
+    border-radius: 0px;
+    margin-bottom: 0px;
+    background-color: #868686;
+    transition: height .5s ease;
+    -webkit-transition: height .5s ease;
+    -moz-transition: height .5s ease;
+    -o-transition: height .5s ease;
+}
+
+.player__wrapper {
+    height: 220px;
+    position: relative;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.progress-bar {
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.progress-bar-success {
+    background-color: #db2828;
+}
+
+.player__button {
+    border: 0px;
+    background: transparent;
+    width: 28px;
+}
+
+.player__button:focus {
+    outline: 0px;
+}
+
+.player__control {
+    padding: 3px 10px;
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    bottom: 0px;
+}
+
+.player__button .fa {
+    color: #fff;
+    line-height: 23px;
+    font-size: 13pt;
+}
+
+.right {
+    float: right;
+}
+
+.player__showTimeHover {
+    position: absolute;
+    bottom: 50px;
+    padding: 5px;
+    background: rgb(51, 51, 51);
+    border-radius: 5px;
+    color: #fff;
+    display: none;
+    -webkit-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    transition: all .2s ease;
+}
+
+.player__listDownload {
+    background: #333;
+    position: absolute;
+    right: 0px;
+    top: 31px;
+    z-index: 3;
+    margin: 0px;
+    padding: 5px 10px;
+}
+
+.player__listDownload__source {
+    padding: 10px 0px;
+    text-align: center;
+    display: block;
+    color: #e0e0e0;
+    font-size: 13pt;
+    font-weight: 200;
+    font-family: 'Cuprum', sans-serif;
+    transition: All .4s ease;
+    -webkit-transition: All .4s ease;
+    -moz-transition: All .4s ease;
+    -o-transition: All .4s ease;
+    transform: translate(0);
+    -webkit-transform: translate(0);
+    -moz-transform: translate(0);
+    -o-transform: translate(0);
+    -ms-transform: translate(0);
+}
+
+.player__listDownload__source:hover {
+    transform: translate(5px, 0px);
+    -webkit-transform: translate(5px, 0px);
+    -moz-transform: translate(5px, 0px);
+    -o-transform: translate(5px, 0px);
+    -ms-transform: translate(5px, 0px);
+}

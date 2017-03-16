@@ -1,0 +1,12 @@
+<div *ngIf="!checkSearch" class="error__box">
+    <h1 class="text__error">Không tìm thấy bài hát yêu cầu</h1>
+    <img src="../assets/img/error.png" class="img__error">
+    <button class="ui button red button__Goback" (click)="goBackMusic()">Trở về</button>
+</div>
+<div *ngIf="checkSearch">
+    <div class="container">
+        <div class="row">
+            <app-list-song [isDouble]="false" [listMusic]="listMusicSearing"></app-list-song>
+        </div>
+    </div>
+</div>

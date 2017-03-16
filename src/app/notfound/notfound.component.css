@@ -1,0 +1,24 @@
+.img__error {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+}
+
+.text__error {
+    text-align: center;
+    margin: 20px auto;
+    color: #db2828;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.button__goback {
+    display: block;
+    margin: 20px auto;
+}
+
+.error__box {
+    margin: 5% 20px;
+}

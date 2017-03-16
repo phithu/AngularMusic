@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Cuprum&subset=vietnamese');
+@import url('https://fonts.googleapis.com/css?family=Quicksand&subset=latin-ext,vietnamese');
+.top__music__title {
+    background: #a5140e;
+    display: inline-block;
+    color: #fff;
+    padding: 5px 10px;
+    font-size: 12pt;
+}
+
+.top__music__box__header {
+    position: relative;
+}
+
+.top__music__box__header::before {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 2px solid #a5140e;
+    content: '';
+}
+
+.top__music__box__content {
+    padding: 15px;
+    border: 2px solid #a5140e;
+    border-top: none;
+}
+
+.img__song {
+    width: 100%;
+    height: 100px;
+    transition: All .3s ease;
+    -webkit-transition: All .3s ease;
+    -moz-transition: All .3s ease;
+    -o-transition: All .3s ease;
+    transform: rotate(0deg) scale(1);
+    -webkit-transform: rotate(0deg) scale(1);
+    -moz-transform: rotate(0deg) scale(1);
+    -o-transform: rotate(0deg) scale(1);
+    -ms-transform: rotate(0deg) scale(1);
+}
+
+.img__cover {
+    width: 100%;
+}
+
+.effect__img {
+    position: relative;
+}
+
+.effect__img::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #333;
+    opacity: 0.7;
+}
+
+.img__animate {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.img__animate::before {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background: #333;
+    opacity: 0.7;
+    transition: All .3s ease;
+    -webkit-transition: All .3s ease;
+    -moz-transition: All .3s ease;
+    -o-transition: All .3s ease;
+}
+
+.img__animate::after {
+    position: absolute;
+    content: '\f04b';
+    font-family: FontAwesome;
+    top: 0px;
+    left: 0px;
+    text-align: center;
+    font-size: 30pt;
+    color: #ff0a00;
+    line-height: 100px;
+    width: 100%;
+    height: 100%;
+    transition: All .3s ease;
+    -webkit-transition: All .3s ease;
+    -moz-transition: All .3s ease;
+    -o-transition: All .3s ease;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -o-transform: scale(0);
+    -ms-transform: scale(0);
+    opacity: 0;
+    z-index: 3;
+}
+
+.img__animate:hover .img__song {
+    transform: rotate(4deg) scale(1.2);
+    -webkit-transform: rotate(4deg) scale(1.2);
+    -moz-transform: rotate(4deg) scale(1.2);
+    -o-transform: rotate(4deg) scale(1.2);
+    -ms-transform: rotate(4deg) scale(1.2);
+}
+
+.img__animate:hover:before {
+    z-index: 2;
+}
+
+.img__animate:hover:after {
+    opacity: 1;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+}
+
+figure {
+    margin: 5px 0px;
+    border-bottom: 3px solid #a5140e;
+    padding: 5px 0px;
+}
+
+.segment__border {
+    position: relative;
+    border: none;
+}
+
+.segment__border::before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 0px;
+    transition-delay: 300ms;
+    transition: width 500ms;
+}
+
+.segment__border::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    width: 0px;
+    transition-delay: 300ms;
+    transition: width 500ms;
+}
+
+.segment__border:hover:before {
+    width: 100%;
+    border-top: 3px solid #a5140e;
+}
+
+.segment__border:hover:after {
+    width: 100%;
+    border-bottom: 3px solid #a5140e;
+}
+
+.outner__border {
+    position: relative;
+}
+
+.outner__border::before {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 0px;
+    content: '';
+    transition-delay: 300ms;
+    transition: height 500ms;
+}
+
+.outner__border:hover:before {
+    height: 100%;
+    border-right: 3px solid #a5140e;
+    z-index: 1;
+}
+
+.outner__border::after {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 0px;
+    content: '';
+    transition-delay: 300ms;
+    transition: height 500ms;
+}
+
+.outner__border:hover:after {
+    height: 100%;
+    border-left: 3px solid #a5140e;
+    z-index: 1;
+}
+
+.list__item__center {
+    text-align: center;
+    display: block;
+    padding: 5px 0px;
+    color: #6f6f6f;
+    font-size: 13pt;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.list__item__reset {
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+audio {
+    display: block;
+    width: 100%;
+}
+
+audio::-webkit-media-controls-panel {
+    background: #333 !important;
+}
+
+.title__info__song {
+    font-family: 'Cuprum', sans-serif;
+    font-weight: 500;
+    font-size: 17pt;
+    margin: 5px 0px;
+}
+
+.title__song {
+    font-size: 20pt;
+}
+
+.title__singer {
+    font-size: 17pt;
+}
+
+.player {
+    margin: 20px 0px;
+}
+
+.title__view {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 11.5pt;
+}
+
+.list__item__inline {
+    float: left;
+    padding: 0px 10px;
+    margin: 0px 4px;
+}
+
+.list__item__social {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.item__facebook {
+    background: #304D8A;
+}
+
+.item__google {
+    background: #E0321C;
+}
+
+.item__twitter {
+    background: #55ACEE;
+}
+
+.list__item__social>a {
+    color: #fff;
+    text-align: center;
+    display: block;
+    line-height: 30px;
+}
+
+.song__lyris {
+    font-weight: 200;
+    margin: 5px 0px;
+    padding: 0px;
+    font-size: 15pt;
+    text-align: center;
+    font-family: 'Cuprum', sans-serif;
+}
+
+.song__title {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    padding: 10px;
+}
+
+
+/*.song__title__group {
+    position: relative;
+    width: 80%;
+    margin: 0px auto;
+    border-bottom: 2px solid #909090;
+}
+
+.song__title__group::before {
+    position: absolute;
+    content: '\F111';
+    font-family: FontAwesome;
+    left: 0px;
+    bottom: -10px;
+    z-index: 1;
+    color: #909090;
+    font-size: 10pt;
+}
+
+.song__title__group::after {
+    position: absolute;
+    content: '\F111';
+    font-family: FontAwesome;
+    right: -1px;
+    bottom: -10px;
+    z-index: 1;
+    color: #909090;
+    font-size: 10pt;
+}*/
+
+.segment__title__group {
+    position: relative;
+    border-bottom: 2px solid #de1111;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.segment__title__group::before {
+    position: absolute;
+    content: '\F111';
+    font-family: FontAwesome;
+    left: 0px;
+    bottom: -10px;
+    z-index: 2;
+    color: #de1111;
+    font-size: 10pt;
+}
+
+.segment__title__group::after {
+    position: absolute;
+    content: '\F111';
+    font-family: FontAwesome;
+    right: -1px;
+    bottom: -10px;
+    z-index: 1;
+    color: #de1111;
+    font-size: 10pt;
+}
+
+.segment__title {
+    text-align: center;
+    color: #de1111;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+}
+
+.song__lyris__group {
+    padding: 20px 0px;
+}
+
+.button__right {
+    float: right;
+    margin: 10px 0px;
+    font-family: 'Quicksand', sans-serif;
+}
+
+.showListMusic__button {
+    height: 40px;
+    width: 40px;
+    position: fixed;
+    background: #a5140e;
+    right: 25px;
+    cursor: pointer;
+    box-shadow: 2px 4px 5px 0 rgba(0, 0, 0, .75);
+    top: 90%;
+    z-index: 1;
+    border-radius: 5px;
+}
+
+.showListMusic__button>.fa {
+    font-size: 17pt;
+    color: #fff;
+    text-align: center;
+    display: block;
+    line-height: 40px;
+}
+
+button {
+    border: none;
+}
+
+button:focus {
+    outline: 0px;
+}
+
+.tab__group {
+    margin: 20px 0px;
+}
+
+.m__segment {
+    margin-bottom: 20px !important;
+}
+
+.img__error {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+}
+
+.text__error {
+    text-align: center;
+    margin: 20px auto;
+    color: #db2828;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.button__Goback {
+    display: block !important;
+    margin: 20px auto !important;
+}
+
+.error__box {
+    margin: 5% 20px;
+}
+
+@media screen and (min-width:993px) {
+    .showListMusic__button {
+        display: none;
+    }
+    #listSong__mobile {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:992px) {
+    #listSong__desktop {
+        display: none !important;
+    }
+}
+
+@media screen and (max-width:631px) {
+    .title__song {
+        font-size: 16pt;
+    }
+    .title__singer {
+        font-size: 12pt;
+    }
+    .title__view {
+        font-size: 10pt;
+    }
+    app-player {
+        display: block;
+        margin: 20px 0px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .info__song__box .col-xs-6 {
+        width: 100%;
+        text-align: center;
+    }
+    .info__song__box .col-xs-6 .list__social {
+        display: table;
+        margin: 0px auto;
+    }
+}

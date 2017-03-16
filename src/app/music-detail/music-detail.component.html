@@ -1,0 +1,70 @@
+<div class="container" *ngIf="listMusic && listMusic.length">
+    <div *ngIf="song && checkIdExist()">
+        <button class="showListMusic__button" (click)="toggleShowHide()">
+            <i class="fa fa-music" aria-hidden="true"></i>
+        </button>
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12" #infoSong [@flyInfoSong]="stateInfoSong">
+                <div class="ui raised segment m__segment info__song__box">
+                    <div class="col-xs-6">
+                        <h1 class="title__info__song title__song">{{song.title}}</h1>
+                        <h3 class="title__info__song title__singer">Trình bày: {{song.artist}}</h3>
+                    </div>
+                    <div class="col-xs-6">
+                        <p class="title__view">
+                            <i class="fa fa-headphones" aria-hidden="true"></i> Lượt nghe: {{song.total_play}}
+                        </p>
+                        <ul class="list__item__reset list__social">
+                            <li class="list__item__inline list__item__social item__facebook">
+                                <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list__item__inline list__item__social item__google">
+                                <a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                            </li>
+                            <li class="list__item__inline list__item__social item__twitter">
+                                <a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                    <app-player [song]="song"></app-player>
+                    <div class="tab__group">
+                        <md-tab-group>
+                            <md-tab label="Lời bài hát">
+                                <div class="song__lyris__group">
+                                    <h3 class="song__lyris" *ngFor="let item of lyricSong">{{item}}</h3>
+                                </div>
+                            </md-tab>
+                            <md-tab label="Cùng ca sỹ">
+                                <app-list-song [isDouble]="true" [listMusic]="listMusicSameSinger"></app-list-song>
+                            </md-tab>
+                        </md-tab-group>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" id="listSong__desktop">
+                <div class="ui raised segment m__segment">
+                    <div class="segment__title__group">
+                        <h3 class="segment__title">Có thể bạn quan tâm</h3>
+                    </div>
+                    <app-list-hot-song [listHotSong]="listMusic" [song]="song" [toggle]="toggle"></app-list-hot-song>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" [@flyListMusic]="stateListMusic" id="listSong__mobile">
+                <div class="ui raised segment m__segment">
+                    <div class="segment__title__group">
+                        <h3 class="segment__title">Có thể bạn quan tâm</h3>
+                    </div>
+                    <app-list-hot-song [listHotSong]="listMusic" [song]="song" [toggle]="toggle"></app-list-hot-song>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!checkIdExist()">
+        <h1 class="text__error">Không tìm thấy bài hát yêu cầu</h1>
+        <img src="../assets/img/error.png" class="img__error">
+        <button class="ui button red button__Goback" (click)="goBackMusic()">Trở về</button>
+    </div>
+</div>

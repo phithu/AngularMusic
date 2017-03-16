@@ -1,0 +1,19 @@
+<div *ngFor="let song of listMusic" [ngClass]="{'col-md-4': !isDouble, 'col-md-6': isDouble}" class="margin_top_botton">
+    <div class="outner__border">
+        <div class="ui raised segment segment__border">
+            <a [routerLink]="['/song', song.id]">
+                <figure>
+                    <div class="img__animate">
+                        <img [src]="song.cover" [alt]="song.name" class="img__song">
+                    </div>
+                    <figcaption>
+                        <ul class="list__info__song">
+                            <li class="list__item__info__song"><i class="fa fa-music" aria-hidden="true"></i> {{song.name}}</li>
+                            <li class="list__item__info__song"><i class="fa fa-user" aria-hidden="true"></i> {{song.artist}}</li>
+                        </ul>
+                    </figcaption>
+                </figure>
+            </a>
+        </div>
+    </div>
+</div>

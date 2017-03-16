@@ -1,0 +1,20 @@
+<ng-progress [positionUsing]="'marginLeft'" [minimum]="0.15" [ease]="'linear'" [speed]="300" [showSpinner]="false" [direction]="'leftToRightIncreased'" [color]="'red'" [trickleSpeed]="300" [thick]="true"></ng-progress>
+<md-sidenav-container class="example-container">
+    <md-sidenav #sidenavMenu class="side__navbar" mode="over" id="sidenavMenu">
+        <app-menu-mobile [sidenavMenu]="sidenavMenu"></app-menu-mobile>
+    </md-sidenav>
+    <md-sidenav #sidenavSearch class="side__navbar" align="end" mode="over" id="sidenavSearch">
+        <button type="button" (click)="sidenavSearch.close()" class="search__box__button">
+            <i class="remove icon"></i>
+        </button>
+        <app-search-form #searchFormComponent [sidenavSearch]="sidenavSearch"></app-search-form>
+    </md-sidenav>
+    <div class="example-sidenav-content">
+        <header>
+            <app-menu [searchFormComponent]="searchFormComponent" [sidenavMenu]="sidenavMenu" [sidenavSearch]="sidenavSearch"></app-menu>
+        </header>
+        <main>
+            <router-outlet></router-outlet>
+        </main>
+    </div>
+</md-sidenav-container>

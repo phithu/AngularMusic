@@ -1,0 +1,9 @@
+<div id="search__box">
+    <form [formGroup]="searchForm">
+        <input type="text" formControlName="searchInput" placeholder="Tìm kiếm bài hát, ca sỹ..." [@handleError]="stateInput" [@widthInput]="state" class="search__box__input__customize" (keyup)="sendKeyword($event)">
+        <button #buttonOpenSearch type="button" (click)="activeAnimate()" class="search__box__button">
+            <i *ngIf="toggleIcon" class="search icon"></i>
+            <i *ngIf="!toggleIcon" class="remove icon"></i>
+        </button>
+    </form>
+</div>

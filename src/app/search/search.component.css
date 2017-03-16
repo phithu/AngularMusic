@@ -1,0 +1,31 @@
+.img__error {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+}
+
+.text__error {
+    text-align: center;
+    margin: 20px auto;
+    color: #db2828;
+    font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.button__Goback {
+    display: block !important;
+    margin: 20px auto !important;
+}
+
+.error__box {
+    margin: 5% 20px;
+}
+
+@media screen and (max-width:767px) {
+    .error__box {
+        margin: 87px 20px;
+        display: block;
+    }
+}

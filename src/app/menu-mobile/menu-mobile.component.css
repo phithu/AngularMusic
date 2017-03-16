@@ -1,0 +1,45 @@
+.img__logo {
+    height: 40px;
+    width: 40px;
+    margin: 0px auto;
+    display: block;
+}
+
+.mobile__box {
+    margin: 0px;
+    padding: 0px;
+}
+
+.mobile__box__img {
+    padding: 5px 0px;
+    background: #a5140e;
+}
+
+.mobile__logo {
+    margin: 10px 0px;
+    color: #e8e8e8 !important;
+}
+
+.mobile__logo:hover {
+    color: #e8e8e8 !important;
+}
+
+.list__menu__mobile {
+    padding: 0px 15px;
+    margin: 10px 0px;
+}
+
+.list__menu__mobile__item a {
+    display: block;
+    padding: 15px 0px;
+    outline: 0px !important;
+    text-align: center;
+    color: #333;
+    font-size: 15pt;
+    font-family: 'Cuprum', sans-serif;
+    border-bottom: 2px solid #db2828;
+}
+
+.list__menu__mobile__item:focus {
+    outline: 0px !important;
+}

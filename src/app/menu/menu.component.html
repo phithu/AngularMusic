@@ -1,0 +1,30 @@
+<nav class="navbar navbar__customize">
+    <div class="container-fluid">
+        <div class="button__responive navbar__button">
+            <button type="button" class="search__box__button" (click)="openSideNavMenu()">
+               <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="button__responive" id="search__mobile">
+            <button type="button" (click)="openSideNavSearch()" class="search__box__button">
+                <i class="fa fa-search" aria-hidden="true"></i>
+            </button>
+        </div>
+        <div class="navbar-header">
+            <a class="navbar-brand" [routerLink]="['music']">
+                <img src="../assets/img/logo.png" alt="Logo" class="img__logo">
+            </a>
+        </div>
+        <ul class="nav navbar-nav navbar__menu">
+            <!--<li>
+                <a [routerLink]="['home']" [routerLinkActive]="['router__link--active']" class="list__menu__link">Trang chủ</a>
+            </li>-->
+            <li>
+                <a [routerLink]="['']" [routerLinkActive]="['router__link--active']" class="list__menu__link">Nhạc Việt</a>
+            </li>
+        </ul>
+        <div class="menu__search__box navbar-right navbar__right__customize" id="search__desktop">
+            <app-search-form></app-search-form>
+        </div>
+    </div>
+</nav>

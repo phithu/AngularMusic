@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans+Condensed:400,500');
+.img__logo {
+    height: 50px;
+}
+
+.navbar__customize {
+    border: none;
+    background: #a5140e;
+    border-radius: 0px;
+}
+
+.navbar-brand {
+    height: 60px;
+    padding: 5px 40px;
+}
+
+.list__menu__link {
+    font-size: 15pt;
+    color: #e2e2e2;
+    padding: 0px 15px;
+    line-height: 60px;
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+
+.router__link--active,
+.list__menu__link:focus,
+.list__menu__link:hover {
+    background: #6f0000;
+    color: #fff;
+}
+
+.navbar__right__customize {
+    line-height: 60px;
+    margin-right: 30px;
+}
+
+
+/*.search__box__input__customize:focus {
+    outline: 0px !important;
+}
+
+.search__box__input__customize {
+    background: #a5140e !important;
+    border: none !important;
+    border-radius: 0px !important;
+    border-bottom: 3px solid #fff !important;
+    width: 0px;
+    height: 30px;
+}
+
+.search__box__input__customize[type=text] {
+    color: #fff;
+    font-size: 12pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 5px;
+}
+
+.search__box__button {
+    background: transparent;
+    border: 0px !important;
+    color: #fff;
+    padding: 0px;
+    margin: 0px;
+}
+
+.search__box__button:focus {
+    outline: 0px !important;
+}
+
+::-webkit-input-placeholder {
+    color: #dedede;
+    font-size: 10pt;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-indent: 5px;
+}*/
+
+
+/*Responsive*/
+
+@media screen and (max-width:992px) {}
+
+@media screen and (min-width:993px) {}
+
+@media screen and (min-width:768px) {
+    #search__mobile,
+    .navbar__button {
+        display: none;
+    }
+}
+
+@media screen and (max-width:767px) {
+    #search__desktop,
+    .navbar__menu {
+        display: none;
+    }
+    .navbar-brand {
+        float: none;
+        height: initial;
+        padding: initial;
+        display: block;
+    }
+    .navbar-header {
+        width: 40px;
+        margin: 0px auto;
+        display: block;
+    }
+    .img__logo {
+        height: 40px;
+    }
+    .navbar__button {
+        float: left;
+    }
+    #search__mobile {
+        float: right;
+    }
+    .button__responive {
+        height: 40px;
+    }
+    .button__responive .fa {
+        font-size: 21pt;
+        text-align: center;
+        line-height: 40px;
+        color: #f7f7f7;
+    }
+    #search__mobile .fa {
+        font-size: 18pt;
+    }
+    .navbar__customize {
+        padding: 5px 0px;
+    }
+}

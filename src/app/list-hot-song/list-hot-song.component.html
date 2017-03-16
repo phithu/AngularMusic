@@ -1,0 +1,33 @@
+<div *ngFor="let item of listHotSong; let i = index">
+    <div *ngIf="toggle && song.song_id_encode !== item.id && i < 12">
+        <a [routerLink]="['/song', item.id]">
+            <figure>
+                <div class="img__animate">
+                    <img [src]="item.cover" [alt]="item.name" class="img__song">
+                </div>
+                <figcaption>
+                    <ul class="list__item__reset list__info__song">
+                        <li class="list__item__info__song list__item__center"><i class="fa fa-music" aria-hidden="true"></i> {{item.name}}</li>
+                        <li class="list__item__info__song list__item__center"><i class="fa fa-user" aria-hidden="true"></i> {{item.artist}}</li>
+                    </ul>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+    <div *ngIf="!toggle && song.song_id_encode !== item.id">
+        <a [routerLink]="['/song', item.id]">
+            <figure>
+                <div class="img__animate">
+                    <img [src]="item.cover" [alt]="item.name" class="img__song">
+                </div>
+                <figcaption>
+                    <ul class="list__item__reset list__info__song">
+                        <li class="list__item__info__song list__item__center"><i class="fa fa-music" aria-hidden="true"></i> {{item.name}}</li>
+                        <li class="list__item__info__song list__item__center"><i class="fa fa-user" aria-hidden="true"></i> {{item.artist}}</li>
+                    </ul>
+                </figcaption>
+            </figure>
+        </a>
+    </div>
+</div>
+<button class="ui red button button__right" (click)="loadMore($event)">Xem thêm</button>
